@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Behin the Counter - Customer"
+config/name="VY_menu"
 run/main_scene="uid://cjc3xnxcpmcgm"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 
 [autoload]
 
