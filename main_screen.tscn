@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://ccr776t7xu3hf"]
+
+[ext_resource type="Texture2D" uid="uid://da2h58lb5it6y" path="res://assets/sfondo.png" id="1_kwhh3"]
+[ext_resource type="PackedScene" uid="uid://c5dq3ew1s2jpc" path="res://src/UserInterface/Titolo.tscn" id="2_4sclt"]
+[ext_resource type="PackedScene" uid="uid://dwdcjlacu65sd" path="res://src/UserInterface/buttone_inizia.tscn" id="3_ywh4s"]
+[ext_resource type="PackedScene" uid="uid://c7lcttbwvh17h" path="res://src/UserInterface/pulsante_cambia_scena.tscn" id="4_ue4rx"]
+
+[node name="MainScreen" type="Control" unique_id=1519005321]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 5.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sfondo" type="TextureRect" parent="." unique_id=1301801855]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.33270833
+anchor_top = -0.7083335
+anchor_right = 1.390625
+anchor_bottom = 1.6255926
+offset_left = 161.28
+offset_top = 227.00002
+offset_right = -224.0
+offset_bottom = -183.3841
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kwhh3")
+stretch_mode = 1
+
+[node name="Titolo" parent="." unique_id=1598201484 instance=ExtResource("2_4sclt")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=1385657551]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -49.0
+offset_right = 158.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttone_inizia" parent="Menu" unique_id=270159855 instance=ExtResource("3_ywh4s")]
+layout_mode = 2
+
+[node name="Buttone_esci" parent="Menu" unique_id=1468365980 instance=ExtResource("4_ue4rx")]
+layout_mode = 2
