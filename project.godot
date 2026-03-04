@@ -11,12 +11,9 @@ config_version=5
 [application]
 
 config/name="VY_menu"
-run/main_scene="uid://cjc3xnxcpmcgm"
-config/features=PackedStringArray("4.5", "Forward Plus")
-
-[autoload]
-
-GameData="*uid://kkuvkmv7yvpr"
+run/main_scene="res://src/main_screen.tscn"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
 
 [physics]
 
