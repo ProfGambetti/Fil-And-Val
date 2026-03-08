@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://dak2wdd1nngm7"]
+
+[ext_resource type="Theme" uid="uid://b4b0mop8ird0b" path="res://assets/ui.theme" id="1_4xiyf"]
+[ext_resource type="Texture2D" uid="uid://da2h58lb5it6y" path="res://assets/sfondo.png" id="2_2uhed"]
+[ext_resource type="Script" uid="uid://jx8v543swuhq" path="res://src/main_screen.gd" id="2_aekbf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xj8yn"]
+texture = ExtResource("2_2uhed")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aekbf"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hxsfj"]
+
+[node name="MainScreen" type="Control" unique_id=1519005321]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 5.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4xiyf")
+script = ExtResource("2_aekbf")
+
+[node name="Panel" type="Panel" parent="." unique_id=437017383]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xj8yn")
+
+[node name="Label" type="Label" parent="." unique_id=2085864581]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -183.0
+offset_right = 179.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.41062272, 0.41062275, 0.41062254, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 61
+text = "Behind The Counter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=140705474]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.75
+offset_top = -64.0
+offset_right = 170.75
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_Start" type="Button" parent="VBoxContainer" unique_id=2047418726]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 20
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_aekbf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hxsfj")
+text = "Start"
+
+[node name="Button_Exit" type="Button" parent="VBoxContainer" unique_id=428773121]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/h_separation = 20
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_aekbf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hxsfj")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Button_Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_Exit" to="." method="_on_exit_pressed"]
